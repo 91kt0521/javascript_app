@@ -11,20 +11,25 @@ function myValue($v) {
 }
 
 // 演算子処理
-function myCalculate($operator) {
+function myCalculate(operator) {
     if (myFlag == 0) {
         myFlag = 1;
         myCal = myTotal + myOperator + myInput;
         myTotal = eval(myCal);
-        document.getElementById('result').value = myTotal;
         myInput = "";
+        document.getElementById('result').value = myTotal;
     }
 
-    if ($operator == "=") {
+    if (operator == "=") {
+        if (myFlag == 1) {
+            resultOutput = myCal + operator + myTotal
+            document.getElementById('output').textContent = resultOutput;
+        }
         myTotal = 0;
-        operator = '+';
+        myOperator = '+';
     } else {
-        myOperator = $operator;
+        // 入力された演算子を退避
+        myOperator = operator;
     }
 }
 
@@ -32,6 +37,6 @@ function myCalculate($operator) {
 function myC() {
     myTotal = 0;
     myInput = "";
-    myCalc = '+';
+    myOperator = '+';
     document.getElementById('result').value = 0;
 }
