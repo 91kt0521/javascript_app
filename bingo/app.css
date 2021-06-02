@@ -81,7 +81,7 @@ body {
     .btn.inactive {
         opacity: 0.5;
     }
-    /* #spinButton {
+    #spinButton {
         margin: 0 auto;
         width: 240px;
         padding: 7px;
@@ -94,7 +94,7 @@ body {
     }
     #spinButton.inactive {
         opacity: 0.5;
-    } */
+    }
 
     .copy {
         display: inline-block;
