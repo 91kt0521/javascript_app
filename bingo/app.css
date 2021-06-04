@@ -11,7 +11,7 @@ body {
         /* padding: 14px; */
         border-radius: 10px;
         margin-bottom: 30px;
-        color: #00aaff;
+        color: #00FF00;
         font-weight: bold;
         font-size: 240px;
         line-height: 240px;
@@ -24,25 +24,6 @@ body {
         opacity: 0.5;
     }
 
-    .BingoPanel {
-        display: inline-block;
-        width: 120px;
-        padding: 14px;
-        border-radius: 10px;
-        margin-bottom: 30px;
-        color: #00aaff;
-        font-weight: bold;
-        font-size: 120px;
-        line-height: 128px;
-        background: #fff;
-    }
-    .BingoPanel + .BingoPanel {
-        margin-left: 20px;
-    }
-    .BingoPanel.unmatched {
-        opacity: 0.5;
-    }
-
     .bingo {
         display: inline-block;
         width: 40px;
@@ -50,7 +31,7 @@ body {
         opacity: 0.5;
         border-radius: 2.5px;
         margin-bottom: 7.5px;
-        color: #00aaff;
+        color: #00FF00;
         font-weight: bold;
         font-size: 22px;
         line-height: 32px;
@@ -71,8 +52,8 @@ body {
         border-radius: 5px;
         margin-bottom: 30px;
         color: #fff;
-        box-shadow: 0 4px 0 #0088cc;
-        background: #00aaff;
+        box-shadow: 0 4px 0 #00AA00;
+        background: #00FF00;
         cursor: pointer;
     }
     .btn + .btn {
@@ -99,7 +80,7 @@ body {
     .copy {
         display: inline-block;
         margin-bottom: 30px;
-        color: #00aaff;
+        color: #111111;
         font-weight: bold;
         font-size: 16px;
     }
