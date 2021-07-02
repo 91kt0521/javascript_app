@@ -1,7 +1,10 @@
 
 var wordlist = ["aaieba<br>kouiu", "waraukadoniha<br>hukukitaru"];
 var wordlistJa = ["ああ言えばこう言う", "笑う門には福来たる"];
+var time_limit =10;
 var readytime = 3;
+var char_num = 0;
+var word_char;
 var random;
 var newline;
 var replacewordlist = [];
@@ -32,6 +35,16 @@ function gameStart() {
     wordDisplay();
     count.innerHTML = "";
     start_button.style.visibility = "visibile";
+    var time_remaining = time_limit;
+    var gametimer = setInterval(function(){
+        count.innerHTML = "残り時間：" + time_remaining;
+        time_remaining--;
+        if (time_remaining <= 0) {
+            clearInterval(gametimer);
+            finish();
+        }
+
+    }, 1000);
 }
 
 /**
@@ -44,4 +57,18 @@ function wordDisplay() {
     newline = wordlist[random].indexOf("<");
     word.innerHTML = wordlist[random];
     japanese.innerHTML = wordlistJa[random];
+    charInsort();
+}
+
+function charInsort() {
+    word_char = replacewordlist[random].charAt(char_num);
+    console.log(word_char);
+}
+
+/**
+ * 終了処理
+ *
+ */
+function finish() {
+    console.log("終了です");
 }
