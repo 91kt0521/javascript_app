@@ -90,6 +90,10 @@ function finish() {
     char_num = 0;
 }
 
+/**
+ * key押下時の処理
+ *
+ */
 document.onkeydown = function(e) {
     if(e.key == 189) {
         keyStr = '-';
